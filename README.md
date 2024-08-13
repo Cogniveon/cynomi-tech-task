@@ -33,3 +33,11 @@ These are some possible improvements to the codebase/app:
 - Navigate to client application folder `cd /client`
 - Install dependencies by running `npm i`
 - Run `npm run dev` in terminal
+
+
+## Screenshots
+
+![home](./screenshots/home.png)
+![dashboard](./screenshots/dashboard.png)
+![responsive_dashboard](./screenshots/responsive_dashboard.png)
+![test_coverage](./screenshots/test_coverage.png)
