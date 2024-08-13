@@ -1,0 +1,19 @@
+POST http://localhost:5002/api/sleepRecord HTTP/1.1
+content-type: application/json
+
+{
+  "sleepDuration": 8,
+    "sleepDate": "08/12/2024",
+    "user": {
+      "name": "Rohit",
+      "email": "xyz@example.com"
+    }
+}
+
+###
+GET http://localhost:5002/api/users HTTP/1.1
+
+
+
+###
+GET http://localhost:5002/api/users/59/sleepChartData HTTP/1.1

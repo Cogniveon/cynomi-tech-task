@@ -1,0 +1,36 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+
+model User {
+  id            Int           @id @default(autoincrement())
+  email         String        @unique
+  name          String
+  gender        Gender        @default(NOT_SPECIFIED)
+  sleepRecords  SleepRecord[]
+}
+
+model SleepRecord {
+  id            Int           @id @default(autoincrement())
+  sleepDuration Int
+  sleepDate     DateTime
+  userId        Int
+  user          User          @relation(fields: [userId], references: [id])
+}
+
+
+enum Gender {
+  MALE
+  FEMALE
+  TRANSGENDER
+  GENDER_NEUTRAL
+  NON_BINARY
+  NOT_SPECIFIED
+}

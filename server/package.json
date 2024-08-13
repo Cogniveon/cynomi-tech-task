@@ -1,5 +1,5 @@
 {
-  "name": "SleepTracker",
+  "name": "sleeptracker",
   "version": "1.0.0",
   "description": "Sleep Tracker Application",
   "main": "index.js",
@@ -11,9 +11,9 @@
     "dev": "nodemon --exec ts-node --files src/index.ts",
     "build": "rm -rf build/ && cd src && tsc",
     "test": "jest",
-    "test:coverage": "jest --coverage",
-    "test:unit": "jest -c jest.unit.config.js",
-    "test:e2e": "jest -c jest.e2e.config.js"
+    "test:coverage": "jest --detectOpenHandles --coverage",
+    "test:unit": "jest --detectOpenHandles -c jest.unit.config.js",
+    "test:e2e": "jest --detectOpenHandles -c jest.e2e.config.js"
   },
   "keywords": [],
   "author": "",
@@ -24,7 +24,7 @@
     "@types/cors": "^2.8.17",
     "@types/date-fns": "^2.6.0",
     "@types/express": "^4.17.21",
-    "@types/jest": "^29.5.0",
+    "@types/jest": "^29.5.12",
     "@types/jsonwebtoken": "^9.0.5",
     "@types/morgan": "^1.9.9",
     "@types/node": "^20.11.17",
